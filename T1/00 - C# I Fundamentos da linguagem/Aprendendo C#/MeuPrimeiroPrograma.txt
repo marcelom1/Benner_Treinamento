@@ -5,6 +5,6 @@ class Programa
 {
 	static void Main(string[] args)
 	{
-		Console.WriteLine("Olá, Mundo! Este é o meu primeiro programa");
+		Console.WriteLine("Olá, Mundo! Este é o meu primeiro Programa");
 	}
 }
