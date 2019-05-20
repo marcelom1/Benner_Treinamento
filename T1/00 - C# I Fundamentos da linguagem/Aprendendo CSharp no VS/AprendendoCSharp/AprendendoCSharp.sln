@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.1-CVariaveis", "2.1-CVari
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-CVPontoFlutuant", "3-CVPontoFlutuant\3-CVPontoFlutuant.csproj", "{6F491718-3792-435E-BD4C-6F7273365314}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.1-PontoFlutuant", "3.1-PontoFlutuant\3.1-PontoFlutuant.csproj", "{6C9D1E0E-16CE-473C-A09E-746FECFD0875}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6F491718-3792-435E-BD4C-6F7273365314}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F491718-3792-435E-BD4C-6F7273365314}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F491718-3792-435E-BD4C-6F7273365314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C9D1E0E-16CE-473C-A09E-746FECFD0875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C9D1E0E-16CE-473C-A09E-746FECFD0875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C9D1E0E-16CE-473C-A09E-746FECFD0875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C9D1E0E-16CE-473C-A09E-746FECFD0875}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
