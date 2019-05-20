@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P13-ForEncadeado", "P13-For
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LacoDeRepeticaoWhile", "LacoDeRepeticaoWhile\LacoDeRepeticaoWhile.csproj", "{AE80399C-6256-4D2A-AB23-74C9A9208A15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LacoDeRepeticaoFor", "LacoDeRepeticaoFor\LacoDeRepeticaoFor.csproj", "{8BD15ACA-0512-4157-B4BA-66C31BD699AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{AE80399C-6256-4D2A-AB23-74C9A9208A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE80399C-6256-4D2A-AB23-74C9A9208A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE80399C-6256-4D2A-AB23-74C9A9208A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BD15ACA-0512-4157-B4BA-66C31BD699AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD15ACA-0512-4157-B4BA-66C31BD699AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD15ACA-0512-4157-B4BA-66C31BD699AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD15ACA-0512-4157-B4BA-66C31BD699AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
