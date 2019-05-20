@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-CVariaveis", "2-CVariavei
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.1-CVariaveis", "2.1-CVariaveis\2.1-CVariaveis.csproj", "{68DF5CFD-DCA7-41CB-9979-E1636B7F10C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3-CVPontoFlutuant", "3-CVPontoFlutuant\3-CVPontoFlutuant.csproj", "{6F491718-3792-435E-BD4C-6F7273365314}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{68DF5CFD-DCA7-41CB-9979-E1636B7F10C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68DF5CFD-DCA7-41CB-9979-E1636B7F10C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68DF5CFD-DCA7-41CB-9979-E1636B7F10C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F491718-3792-435E-BD4C-6F7273365314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F491718-3792-435E-BD4C-6F7273365314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F491718-3792-435E-BD4C-6F7273365314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F491718-3792-435E-BD4C-6F7273365314}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
