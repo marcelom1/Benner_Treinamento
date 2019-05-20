@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-CharEText", "5-CharEText\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.1-TestChar", "5.1-TestChar\5.1-TestChar.csproj", "{F380B30F-A6D0-4FDB-899B-CCD2C01EDC1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6-AtriVariaveis", "6-AtriVariaveis\6-AtriVariaveis.csproj", "{C64ED134-D8FA-4533-8313-D9A10F1BE2A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{F380B30F-A6D0-4FDB-899B-CCD2C01EDC1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F380B30F-A6D0-4FDB-899B-CCD2C01EDC1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F380B30F-A6D0-4FDB-899B-CCD2C01EDC1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C64ED134-D8FA-4533-8313-D9A10F1BE2A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C64ED134-D8FA-4533-8313-D9A10F1BE2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C64ED134-D8FA-4533-8313-D9A10F1BE2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C64ED134-D8FA-4533-8313-D9A10F1BE2A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
