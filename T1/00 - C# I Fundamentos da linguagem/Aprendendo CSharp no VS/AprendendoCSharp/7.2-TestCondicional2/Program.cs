@@ -19,6 +19,7 @@ namespace _7._2_TestCondicional2
             {
                 Console.WriteLine("Infelizmente você não pode entrar");
             }
+            Console.ReadLine();
         }
     }
 }
