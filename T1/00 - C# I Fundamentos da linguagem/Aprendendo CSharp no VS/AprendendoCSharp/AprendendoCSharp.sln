@@ -53,6 +53,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LacoDeRepeticaoWhile", "Lac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LacoDeRepeticaoFor", "LacoDeRepeticaoFor\LacoDeRepeticaoFor.csproj", "{8BD15ACA-0512-4157-B4BA-66C31BD699AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LacoRepeticaoFor", "LacoRepeticaoFor\LacoRepeticaoFor.csproj", "{87193EF9-7966-454D-81B4-C44B4B78B6CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LacoRepeticaoFor2", "LacoRepeticaoFor2\LacoRepeticaoFor2.csproj", "{DC369BBF-D6F2-46C6-9EDB-BB03268A9022}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +163,14 @@ Global
 		{8BD15ACA-0512-4157-B4BA-66C31BD699AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BD15ACA-0512-4157-B4BA-66C31BD699AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BD15ACA-0512-4157-B4BA-66C31BD699AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87193EF9-7966-454D-81B4-C44B4B78B6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87193EF9-7966-454D-81B4-C44B4B78B6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87193EF9-7966-454D-81B4-C44B4B78B6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87193EF9-7966-454D-81B4-C44B4B78B6CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC369BBF-D6F2-46C6-9EDB-BB03268A9022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC369BBF-D6F2-46C6-9EDB-BB03268A9022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC369BBF-D6F2-46C6-9EDB-BB03268A9022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC369BBF-D6F2-46C6-9EDB-BB03268A9022}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
