@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4-CVariaveis", "4-CVariavei
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.1CVariaveis", "4.1CVariaveis\4.1CVariaveis.csproj", "{AD182455-39CD-495C-BC88-60C24155BFD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5-CharEText", "5-CharEText\5-CharEText.csproj", "{F8F410A6-C63F-437E-B551-B2FFBD9E76FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{AD182455-39CD-495C-BC88-60C24155BFD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD182455-39CD-495C-BC88-60C24155BFD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD182455-39CD-495C-BC88-60C24155BFD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F410A6-C63F-437E-B551-B2FFBD9E76FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F410A6-C63F-437E-B551-B2FFBD9E76FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F410A6-C63F-437E-B551-B2FFBD9E76FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F410A6-C63F-437E-B551-B2FFBD9E76FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
