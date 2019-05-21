@@ -8,6 +8,7 @@ namespace _07_ByteBank
         private int _agencia;
         private int _numero;
         private double _saldo = 100;
+        public static int TotalDeContasCriadas { get; private set; }
 
         public int Numero {
 
@@ -42,6 +43,7 @@ namespace _07_ByteBank
         {
             Agencia = agencia;
             Numero = numero;
+            TotalDeContasCriadas++;
         }
 
         public double Saldo
