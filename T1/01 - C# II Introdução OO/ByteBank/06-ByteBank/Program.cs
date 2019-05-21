@@ -7,6 +7,14 @@ namespace _06_ByteBank
         static void Main(string[] args)
         {
             ContaCorrente conta = new ContaCorrente();
+            Cliente cliente  = new Cliente();
+
+            cliente.Nome = "Marcelo";
+            cliente.Cpf = "938.000.332-71";
+            cliente.Profissao = "Estagiario";
+
+
+
 
             conta.Saldo = 10;
 
