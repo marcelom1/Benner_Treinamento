@@ -23,7 +23,10 @@ namespace ByteBank
 
             GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
 
+            Console.WriteLine(carlos.Nome);
             gerenciador.Registrar(carlos);
+
+            Console.WriteLine(gabriela.Nome);
             gerenciador.Registrar(gabriela);
 
             Console.WriteLine("Total de bonificação: " + gerenciador.GetTotalBonificacao());
