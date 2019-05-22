@@ -13,7 +13,7 @@ namespace ByteBank.Funcionarios
         public double  salario { get; set; }
 
 
-        public double GetBonificacao()
+        public virtual double GetBonificacao()
         {
             return salario * 0.10;
         }
