@@ -21,6 +21,10 @@ namespace ByteBank.Funcionarios
             this.salario = salario;
             TotalDeFuncionarios++;
         }
+        public Funcionario(string cpf) : this(1500, cpf)
+        {
+            
+        }
 
         public abstract void AumentarSalario();
 
