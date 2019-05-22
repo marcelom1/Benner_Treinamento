@@ -11,15 +11,20 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
-            Funcionario carlos = new Funcionario();
+            Funcionario carlos = new Funcionario(2000, "589.541.954-71");
             carlos.Nome = "Carlos";
-            carlos.CPF = "589.541.954-71";
-            carlos.salario = 2000;
+            Console.WriteLine( Funcionario.TotalDeFuncionarios);
+         
+            carlos.AumentarSalario();
+            Console.WriteLine("Novo salário do carlos " + carlos.salario);
 
-            Diretor gabriela = new Diretor();
-            gabriela.Nome = "Gabriela";
-            gabriela.CPF = "965.652.852-72";
-            gabriela.salario = 5000;
+            Diretor gabriela = new Diretor("965.652.852 - 72");
+            gabriela.Nome = "Gabriele";
+            Console.WriteLine(Funcionario.TotalDeFuncionarios);
+
+
+            gabriela.AumentarSalario();
+            Console.WriteLine("Novo salário da Gabriela " + gabriela.salario);
 
             GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
 
