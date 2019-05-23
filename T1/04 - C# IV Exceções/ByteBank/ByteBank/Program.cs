@@ -12,7 +12,10 @@ namespace ByteBank
                 ContaCorrente conta = new ContaCorrente(432, 1123);
                 conta.Depositar(50);
                 Console.WriteLine(conta.Saldo);
-                conta.Sacar(500);
+                conta.Sacar(50);
+
+                ContaCorrente conta2 = new ContaCorrente(421, 134);
+                conta2.Transferir(-10, conta);
             }
             catch (SaldoInsuficienteException e)
             {
