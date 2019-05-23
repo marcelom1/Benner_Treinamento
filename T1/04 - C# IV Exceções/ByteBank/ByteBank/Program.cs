@@ -11,11 +11,16 @@ namespace _07_ByteBank
             {
                 ContaCorrente conta = new ContaCorrente(0, 0);
             }
-            catch (ArgumentException ex)
+            catch (ArgumentException e)
             {
+                if (e.ParamName == "agencia")
+                {
+                    Console.WriteLine("Testando ParamName nas exceções");
+                }
                 Console.WriteLine("Ocorreu uma exceção do tipo ArgumentException");
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(e.Message);
             }
+            
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
