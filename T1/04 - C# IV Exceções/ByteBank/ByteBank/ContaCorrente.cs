@@ -2,7 +2,7 @@
 
 using System;
 
-namespace _07_ByteBank
+namespace ByteBank
 {
     public class ContaCorrente
     {
@@ -51,17 +51,16 @@ namespace _07_ByteBank
         }
 
 
-        public bool Sacar(double valor)
+        public void Sacar(double valor)
         {
-            if (this._saldo < valor)
+            if (_saldo < valor)
             {
-                return false;
+                throw new SaldoInsuficienteException("Saldo Insuficiente para Saque no valor de " + valor);
             }
-            else
-            {
-                this._saldo -= valor;
-                return true;
-            }
+            
+            _saldo -= valor;
+               
+            
         }
 
         public void Depositar(double valor)

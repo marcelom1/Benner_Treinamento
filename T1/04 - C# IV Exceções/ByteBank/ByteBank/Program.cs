@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _07_ByteBank
+namespace ByteBank
 {
     class Program
     {
@@ -9,7 +9,15 @@ namespace _07_ByteBank
 
             try
             {
-                ContaCorrente conta = new ContaCorrente(0, 0);
+                ContaCorrente conta = new ContaCorrente(432, 1123);
+                conta.Depositar(50);
+                Console.WriteLine(conta.Saldo);
+                conta.Sacar(500);
+            }
+            catch (SaldoInsuficienteException e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(" catch (SaldoInsuficienteException )");
             }
             catch (ArgumentException e)
             {
@@ -46,7 +54,7 @@ namespace _07_ByteBank
         }
         private static void Metodo()
         {
-            TestaDivisao(0);
+            TestaDivisao(2);
         }
 
         private static void TestaDivisao(int divisor)
