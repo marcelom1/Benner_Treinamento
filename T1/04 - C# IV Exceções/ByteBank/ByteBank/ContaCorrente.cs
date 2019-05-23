@@ -14,7 +14,8 @@ namespace ByteBank
 
         public int Numero { get; }
         public int Agencia { get;  }
-        
+        public int ContSaqueNaoPermitidos { get; private set; }
+        public int ContTransferenciasNaoPermitidos { get; private set; }
 
         public ContaCorrente(int agencia, int numero)
         {
@@ -60,7 +61,9 @@ namespace ByteBank
 
             if (_saldo < valor)
             {
+                ContSaqueNaoPermitidos++;
                 throw new SaldoInsuficienteException(Saldo,valor);
+
             }
             
             _saldo -= valor;
@@ -80,8 +83,17 @@ namespace ByteBank
             {
                 throw new ArgumentException("Valor invalido para transferencia. ", nameof(valor));
             }
+            try
+            {
+
+                Sacar(valor);
+            }
+            catch(SaldoInsuficienteException e)
+            {
+                ContTransferenciasNaoPermitidos++;
+                throw new OperaçãoFinanceiraException("Operação Não Realizada", e);
+            }
             
-            Sacar(valor);
             contaDestino.Depositar(valor);
             
         }
