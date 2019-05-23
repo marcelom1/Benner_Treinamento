@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace ByteBank
 {
@@ -6,7 +7,54 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
+            try
+            {
+                CarregarContas();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("CATCH NO METODO MAIN");
+            }
 
+            Console.ReadLine();
+        }
+        private static void CarregarContas()
+        {
+
+            using (LeitorDeArquivo leitor =new LeitorDeArquivo("teste.txt"))
+            {
+                leitor.LerProximaLinha();
+            }
+
+
+            //LeitorDeArquivo leitor = null;
+
+            //try
+            //{
+            //    leitor = new LeitorDeArquivo("conta.txt");
+            //    leitor.LerProximaLinha();
+            //    leitor.LerProximaLinha();
+            //    leitor.LerProximaLinha();
+            //    leitor.LerProximaLinha();
+
+
+                
+            //}
+            //catch(IOException)
+            //{
+                
+            //    Console.WriteLine("Exceção do tipi IOException capturada e tratada");
+            //}
+            //finally
+            //{
+            //    if (leitor!=null)
+            //        leitor.Fechar();
+            //}
+        }
+
+        private static void TestaInnerException()
+        {
+            
             try
             {
                 ContaCorrente conta = new ContaCorrente(432, 1123);
@@ -16,7 +64,7 @@ namespace ByteBank
 
                 ContaCorrente conta2 = new ContaCorrente(421, 134);
                 conta2.Transferir(1000, conta);
-               //conta.Sacar(10000);
+                conta.Sacar(10000);
             }
 
             catch (SaldoInsuficienteException e)
@@ -35,7 +83,7 @@ namespace ByteBank
                 {
                     Console.WriteLine("Testando ParamName nas exceções");
                 }
-                Console.WriteLine("Ocorreu uma exceção do tipo ArgumentException");
+Console.WriteLine("Ocorreu uma exceção do tipo ArgumentException");
                 Console.WriteLine(e.Message);
             }
             
@@ -68,6 +116,7 @@ namespace ByteBank
                 Console.WriteLine(e.StackTrace);
             }
             Console.ReadLine();
+
         }
         private static void Metodo()
         {
