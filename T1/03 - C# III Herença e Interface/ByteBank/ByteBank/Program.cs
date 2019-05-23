@@ -33,7 +33,12 @@ namespace ByteBank
             camila.Senha = "abc";
 
             sistemaInterno.Logar(roberta, "123");
-            sistemaInterno.Logar(roberta, "abc");
+            sistemaInterno.Logar(camila, "abc");
+
+            ParceiroComercial parceiro = new ParceiroComercial();
+            parceiro.Senha = "123456";
+
+            sistemaInterno.Logar(parceiro, "123456");
 
 
         }
