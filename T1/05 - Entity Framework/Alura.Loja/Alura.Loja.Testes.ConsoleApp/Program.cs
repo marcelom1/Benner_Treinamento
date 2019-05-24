@@ -11,11 +11,30 @@ namespace Alura.Loja.Testes.ConsoleApp
         static void Main(string[] args)
         {
             //GravarUsandoAdoNet();
-           // GravarUsandoEntity();
-            RecuperarProdutos();
-            ExcluirProdutos();
-            RecuperarProdutos();
+            //GravarUsandoEntity();
+            // RecuperarProdutos();
+            // ExcluirProdutos();
+            // RecuperarProdutos();
+             AtualizarProduto();
+
+
             Console.ReadLine();
+        }
+
+        private static void AtualizarProduto()
+        {
+            RecuperarProdutos();
+            using (var repo = new LojaContex())
+            {
+                Produto primeiro = repo.Produtos.First();
+                primeiro.Nome = "Vingadores - Ultimato 2";
+                repo.Produtos.Update(primeiro);
+                repo.SaveChanges();
+
+            }
+            RecuperarProdutos();
+            
+            
         }
 
         private static void ExcluirProdutos()
