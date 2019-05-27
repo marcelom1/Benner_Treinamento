@@ -33,7 +33,7 @@ namespace Alura.Loja.Testes.ConsoleApp
                 loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
             }
-
+            Console.ReadLine();
         }
 
       

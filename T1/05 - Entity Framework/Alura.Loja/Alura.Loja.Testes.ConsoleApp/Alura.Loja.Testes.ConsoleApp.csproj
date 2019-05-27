@@ -184,9 +184,9 @@
     <Compile Include="Migrations\20190527141052_Compra.designer.cs">
       <DependentUpon>20190527141052_Compra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20190527145724_Promocao.cs" />
-    <Compile Include="Migrations\20190527145724_Promocao.designer.cs">
-      <DependentUpon>20190527145724_Promocao.cs</DependentUpon>
+    <Compile Include="Migrations\20190527165139_Promocao.cs" />
+    <Compile Include="Migrations\20190527165139_Promocao.designer.cs">
+      <DependentUpon>20190527165139_Promocao.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\LojaContexModelSnapshot.cs" />
     <Compile Include="Produto.cs" />
