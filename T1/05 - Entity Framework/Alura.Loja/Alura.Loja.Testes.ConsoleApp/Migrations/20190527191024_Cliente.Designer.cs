@@ -8,9 +8,10 @@ using Alura.Loja.Testes.ConsoleApp;
 namespace Alura.Loja.Testes.ConsoleApp.Migrations
 {
     [DbContext(typeof(LojaContex))]
-    partial class LojaContexModelSnapshot : ModelSnapshot
+    [Migration("20190527191024_Cliente")]
+    partial class Cliente
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
@@ -21,9 +22,13 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int?>("EnderecoDeEntregaClienteId");
+
                     b.Property<string>("Nome");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EnderecoDeEntregaClienteId");
 
                     b.ToTable("Clientes");
                 });
@@ -48,7 +53,8 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
 
             modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Endereco", b =>
                 {
-                    b.Property<int>("ClienteId");
+                    b.Property<int>("ClienteId")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Bairro");
 
@@ -64,7 +70,7 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
 
                     b.HasKey("ClienteId");
 
-                    b.ToTable("Enderecos");
+                    b.ToTable("Endereco");
                 });
 
             modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Produto", b =>
@@ -114,19 +120,18 @@ namespace Alura.Loja.Testes.ConsoleApp.Migrations
                     b.ToTable("PromocaoProduto");
                 });
 
+            modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Cliente", b =>
+                {
+                    b.HasOne("Alura.Loja.Testes.ConsoleApp.Endereco", "EnderecoDeEntrega")
+                        .WithMany()
+                        .HasForeignKey("EnderecoDeEntregaClienteId");
+                });
+
             modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Compra", b =>
                 {
                     b.HasOne("Alura.Loja.Testes.ConsoleApp.Produto", "Produto")
                         .WithMany()
                         .HasForeignKey("ProdutoId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Alura.Loja.Testes.ConsoleApp.Endereco", b =>
-                {
-                    b.HasOne("Alura.Loja.Testes.ConsoleApp.Cliente", "Cliente")
-                        .WithOne("EnderecoDeEntrega")
-                        .HasForeignKey("Alura.Loja.Testes.ConsoleApp.Endereco", "ClienteId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

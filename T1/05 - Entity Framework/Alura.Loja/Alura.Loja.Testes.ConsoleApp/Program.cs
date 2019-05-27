@@ -12,13 +12,43 @@ namespace Alura.Loja.Testes.ConsoleApp
 {
     class Program
     {
+        public static string Bairro { get; private set; }
+
         static void Main(string[] args)
         {
+            var fulano = new Cliente();
+            fulano.Nome = "Marcelo";
+            fulano.EnderecoDeEntrega = new Endereco()
+            {
+                Numero = 12,
+                Lougradouro = "Rua dos bobos",
+                Complemento = "Casa",
+                Bairro = "Gasparinho",
+                Cidade = "Gaspar"
+                
+            };
+
+            using (var contexto = new LojaContex())
+            {
+                var serviceProvider = contexto.GetInfrastructure<IServiceProvider>();
+                var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
+                loggerFactory.AddProvider(SqlLoggerProvider.Create());
+
+                contexto.Clientes.Add(fulano);
+                contexto.SaveChanges();
+       
+                
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void MuitosParaMuitos(){
             var p1 = new Produto() { Nome = "Suco de Laranja", Categoria = "Bebidas", PrecoUnitario = 8.79, Unidade = "Litros" };
             var p2 = new Produto() { Nome = "Café", Categoria = "Bebidas", PrecoUnitario = 12.45, Unidade = "Gramas" };
             var p3 = new Produto() { Nome = "Macarrão", Categoria = "Alimentos", PrecoUnitario = 4.23, Unidade = "Gramas" };
 
-            
+
 
 
             var promocaoDePascoa = new Promocao();
@@ -30,7 +60,7 @@ namespace Alura.Loja.Testes.ConsoleApp
             promocaoDePascoa.IncluirProduto(p2);
             promocaoDePascoa.IncluirProduto(p3);
 
-            
+
 
             using (var contexto = new LojaContex())
             {
@@ -40,7 +70,7 @@ namespace Alura.Loja.Testes.ConsoleApp
 
                 //contexto.Promocoes.Add(promocaoDePascoa);
                 var promocao = contexto.Promocoes.Find(1);
-                 contexto.Promocoes.Remove(promocao);
+                contexto.Promocoes.Remove(promocao);
                 //ExibeEntries(contexto.ChangeTracker.Entries());
                 contexto.SaveChanges();
 
