@@ -10,6 +10,11 @@ namespace Alura.Loja.Testes.ConsoleApp
     {
         private LojaContex contexto;
 
+        public ProdutoDAOEntity()
+        {
+            this.contexto = new LojaContex();
+        }
+
         public void Adicionar(Produto p)
         {
             contexto.Produtos.Add(p);
@@ -25,12 +30,12 @@ namespace Alura.Loja.Testes.ConsoleApp
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            contexto.Dispose();
         }
 
         public IList<Produto> Produtos()
         {
-            throw new NotImplementedException();
+            return contexto.Produtos.ToList();
         }
 
         public void Remover(Produto p)

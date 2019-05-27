@@ -1,4 +1,6 @@
-﻿namespace Alura.Loja.Testes.ConsoleApp
+﻿using System;
+
+namespace Alura.Loja.Testes.ConsoleApp
 {
     public class Produto
     {
@@ -6,5 +8,12 @@
         public string Nome { get; internal set; }
         public string Categoria { get; internal set; }
         public double Preco { get; internal set; }
+
+       public override string ToString()
+        {
+            return "Produto: "+this.Nome;
+        }
     }
+    
+ 
 }
