@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Infrastructure;
+﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
@@ -20,36 +21,38 @@ namespace Alura.Loja.Testes.ConsoleApp
                 var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
                 loggerFactory.AddProvider(SqlLoggerProvider.Create());
                 var produtos = contexto.Produtos.ToList();
-                foreach (var p in produtos)
+
+                ExibeEntries(contexto.ChangeTracker.Entries());
+
+                //  var p1 = produtos.Last();
+                //p1.Nome = "007 - O Espiao";
+
+                var novoProduto = new Produto()
                 {
-                    Console.WriteLine(p);
-                }
+                    Nome = "Desinfetante",
+                    Categoria = "Limpeza",
+                    Preco = 2.99
+
+                };
+                contexto.Produtos.Add(novoProduto);
+
+                ExibeEntries(contexto.ChangeTracker.Entries());
+
                 Console.WriteLine("=================");
-                foreach (var e in contexto.ChangeTracker.Entries())
-                {
-                    Console.WriteLine(e.State);
-                }
+                
+                contexto.SaveChanges();
 
-                var p1 = produtos.Last();
-                p1.Nome = "007 - O Espiao";
+                ExibeEntries(contexto.ChangeTracker.Entries());
 
-                Console.WriteLine("=================");
-                foreach (var e in contexto.ChangeTracker.Entries())
-                {
-                    Console.WriteLine(e.State);
-                }
+            }
+        }
 
-                Console.WriteLine("==============");
-
-
-                produtos = contexto.Produtos.ToList();
-                foreach (var p in produtos)
-                {
-                    Console.WriteLine(p);
-                }
-
-
-
+        private static void ExibeEntries(IEnumerable<EntityEntry> entries)
+        {
+            Console.WriteLine("=================");
+            foreach (var e in entries)
+            {
+                Console.WriteLine(e.Entity.ToString() + " - " + e.State);
             }
         }
     }           
