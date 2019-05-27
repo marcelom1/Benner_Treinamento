@@ -24,12 +24,11 @@ namespace Alura.Loja.Testes.ConsoleApp
         private static void AtualizarProduto()
         {
             RecuperarProdutos();
-            using (var repo = new LojaContex())
+            using (var repo = new ProdutoDAOEntity())
             {
-                Produto primeiro = repo.Produtos.First();
+                Produto primeiro = repo.Produtos().First();
                 primeiro.Nome = "Vingadores - Ultimato 2";
-                repo.Produtos.Update(primeiro);
-                repo.SaveChanges();
+                repo.Atualizar(primeiro);
 
             }
             RecuperarProdutos();
@@ -39,23 +38,22 @@ namespace Alura.Loja.Testes.ConsoleApp
 
         private static void ExcluirProdutos()
         {
-            using (var repo = new LojaContex())
+            using (var repo = new ProdutoDAOEntity)
             {
-                IList<Produto> produtos = repo.Produtos.ToList();
+                IList<Produto> produtos = repo.Produtos();
                 foreach (var item in produtos)
                 {
-                    repo.Produtos.Remove(item);
+                    repo.Remover(item);
 
                 }
-                repo.SaveChanges();
             }
         }
 
         private static void RecuperarProdutos()
         {
-            using (var repo = new LojaContex())
+            using (var repo = new ProdutoDAOEntity)
             {
-                IList<Produto> produtos = repo.Produtos.ToList();
+                IList<Produto> produtos = repo.Produtos();
                 Console.WriteLine("Foram encontrados {0} produtos(s).", produtos.Count);
                 foreach (var item in produtos)
                 {
@@ -71,10 +69,9 @@ namespace Alura.Loja.Testes.ConsoleApp
             p.Categoria = "Livros";
             p.Preco = 19.89;
 
-            using (var contexto = new LojaContex())
+            using (var contexto = new ProdutoDAOEntity())
             {
-                contexto.Produtos.Add(p);
-                contexto.SaveChanges();
+                contexto.Adicionar(p);
             }
 
         }
