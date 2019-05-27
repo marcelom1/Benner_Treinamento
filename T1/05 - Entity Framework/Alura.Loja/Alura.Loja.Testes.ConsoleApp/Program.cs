@@ -14,17 +14,23 @@ namespace Alura.Loja.Testes.ConsoleApp
     {
         static void Main(string[] args)
         {
+            var p1 = new Produto() { Nome = "Suco de Laranja", Categoria = "Bebidas", PrecoUnitario = 8.79, Unidade = "Litros" };
+            var p2 = new Produto() { Nome = "Café", Categoria = "Bebidas", PrecoUnitario = 12.45, Unidade = "Gramas" };
+            var p3 = new Produto() { Nome = "Macarrão", Categoria = "Alimentos", PrecoUnitario = 4.23, Unidade = "Gramas" };
+
+            
+
 
             var promocaoDePascoa = new Promocao();
             promocaoDePascoa.Descricao = "Pascoa Feliz";
             promocaoDePascoa.DataInicio = DateTime.Now;
             promocaoDePascoa.DataTermino = DateTime.Now.AddMonths(3);
-            //promocaoDePascoa.Produtos.Add(new Produto());
-          //  promocaoDePascoa.Produtos.Add(new Produto());
-           // promocaoDePascoa.Produtos.Add(new Produto());
 
+            promocaoDePascoa.IncluirProduto(p1);
+            promocaoDePascoa.IncluirProduto(p2);
+            promocaoDePascoa.IncluirProduto(p3);
 
-
+            
 
             using (var contexto = new LojaContex())
             {
@@ -32,10 +38,25 @@ namespace Alura.Loja.Testes.ConsoleApp
                 var loggerFactory = serviceProvider.GetService<ILoggerFactory>();
                 loggerFactory.AddProvider(SqlLoggerProvider.Create());
 
+                //contexto.Promocoes.Add(promocaoDePascoa);
+                var promocao = contexto.Promocoes.Find(1);
+                 contexto.Promocoes.Remove(promocao);
+                //ExibeEntries(contexto.ChangeTracker.Entries());
+                contexto.SaveChanges();
+
+
+
             }
             Console.ReadLine();
         }
+        private static void ExibeEntries(IEnumerable<EntityEntry> entries)
+        {
+            Console.WriteLine("=================");
+            foreach (var e in entries)
+            {
+                Console.WriteLine(e.Entity.ToString() + " - " + e.State);
+            }
+        }
 
-      
     }           
 }
