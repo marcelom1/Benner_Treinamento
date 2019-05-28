@@ -6,6 +6,11 @@ main h1 {
     text-align: center;
 
 }
+
+main a {
+    color: #851944;
+}
+
 h1, h2 {
     font-family: "Open Sans Condensed","Arial",sans-serif;
 }
@@ -17,4 +22,27 @@ body {
 p {
     text-align: justify;
     font-family: "Crimson Text";
+}
+
+blockquote{
+    background-color: #D9E5E3;
+    
+}
+footer{
+    background-color: black
+    color: #F2FFFC;
+    
+}
+aside {
+    background-color: #3C1D3D;
+    color: #F2FFFC;
+}
+
+aside a {
+    color: inherit;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+nav a {
+    color: #F2FFFC;
 }
