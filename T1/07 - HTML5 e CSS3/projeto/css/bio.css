@@ -1,13 +1,10 @@
-blockquote{
-     padding: 20px;
-}
-
 .citacao {
 	background-color: #D9E5E3;
 	border: 10px solid #C2CCCA;
 	width: 300px;
 	box-sizing: border-box;
 	margin: 20px 40px;
+    padding: 20px;
 }
 cite{
     font-style: italic;

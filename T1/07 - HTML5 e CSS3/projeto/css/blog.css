@@ -7,6 +7,8 @@
     background-color: #E6E7E8;
 }
 
-blockquote {
-    padding: 20px;
+article{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
 }
