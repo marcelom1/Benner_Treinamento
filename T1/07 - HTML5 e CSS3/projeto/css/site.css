@@ -4,6 +4,14 @@ body {
 	font-size: 120%;
 	line-height: 1.5;
 }
+main {
+    float: left;
+    width: 85%;
+    padding-bottom: 80px;
+}
+main a {
+	color: #851944;
+}
 
 h1, h2 {
 	font-family: "Open Sans Condensed", "Arial", sans-serif;
@@ -18,48 +26,8 @@ h1, h2 {
 	font-size: 60px;
     text-transform: uppercase;
 }
-
-p {
-	text-align: justify;
-	margin: 20px 0;
-}
-
-.citacao {
-	background-color: #D9E5E3;
-	border: 10px solid #C2CCCA;
-	width: 250px;
-	box-sizing: border-box;
-	margin: 20px 40px;
-}
-
-.navegacao {
-	background-color: #3C1D3D;
-	color: #F2FFFC;
-    padding: 20px;
-    text-align: center
-}
-
-#rodape{
-	background-color: #000;
-	color: #F2FFFC;
-    padding: 20px;
-}
-
-nav a {
-	color: #F2FFFC;
-}
-
-main a {
-	color: #851944;
-}
-
-aside a {
-	color: inherit;
-	font-family: "Open Sans Condensed", sans-serif;
-}
-
-blockquote, aside, footer {
-    padding: 20px;
+.sub_titulo{
+    clear: both;
 }
 
 .texto_principal {
@@ -68,13 +36,73 @@ blockquote, aside, footer {
 	padding: 30px 0;
 }
 
-aside {
-	text-align: center;
+p {
+	text-align: justify;
+	margin: 20px 0;
+}
+    
 }
 
-aside h1 {
+.navegacao {
+	background-color: #3C1D3D;
+	color: #F2FFFC;
+    padding: 20px;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+nav a {
+	color: #F2FFFC;
+}
+
+.navegacao {
+	text-align: center;
+    clear: right;
+    box-sizing: border-box;
+}
+
+.navegacao a {
+	color: inherit;
+	font-family: "Open Sans Condensed", sans-serif;
+}
+
+.navegacao, footer {
+    padding: 20px;
+}
+
+img, .navegacao{
+    width: 300px;
+    float: right;
+    border-left: 10px solid black; 
+    border-bottom: 10px solid black;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.navegacao{
+    width: 20%;
+    top: 300px
+}
+
+
+
+.navegacao h1 {
 	font-size: 30px;
 	margin-bottom: 25px;
+}
+
+#rodape{
+	background-color: #000;
+	color: #F2FFFC;
+    padding: 20px;
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 strong {
@@ -95,20 +123,20 @@ h2 {
 .icones_sociais a{
     width: 40px;
     height: 40px;
-    display: inline-block;
-    text-indent: -99999px;
+    display: block;
+    color: transparent;
 }
 
 .github{
-    background-image: url(github.png);
+    background-image: url(../img/github.png);
 }
 
 .twitter{
-   background-image: url(twitter.png);    
+   background-image: url(../img/twitter.png);    
 }
 
 .linkedin{
-    background-image: url(linkedin.png);
+    background-image: url(../img/linkedin.png);
 }
 
 article{
@@ -116,11 +144,4 @@ article{
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
 }
-.leia_mais {
-    padding: 8px;
-    margin: 16px;
-    display: block;
-    font-size: 24px;
-    text-align: center;
-    background-color: #E6E7E8;
-}
+

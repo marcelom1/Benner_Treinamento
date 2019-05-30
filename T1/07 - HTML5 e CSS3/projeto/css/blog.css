@@ -1,0 +1,12 @@
+.leia_mais {
+    padding: 8px;
+    margin: 16px;
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    background-color: #E6E7E8;
+}
+
+blockquote {
+    padding: 20px;
+}
