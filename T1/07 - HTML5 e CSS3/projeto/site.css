@@ -16,6 +16,7 @@ h1, h2 {
 	padding: 25px;
 	border-bottom: 10px solid black;
 	font-size: 60px;
+    text-transform: uppercase;
 }
 
 p {
@@ -87,9 +88,27 @@ em {
 h2 {
 	font-size: 30px;
 }
-
 .icones_sociais li {
     display: inline-block;
+}
+
+.icones_sociais a{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-indent: -99999px;
+}
+
+.github{
+    background-image: url(github.png);
+}
+
+.twitter{
+   background-image: url(twitter.png);    
+}
+
+.linkedin{
+    background-image: url(linkedin.png);
 }
 
 article{
