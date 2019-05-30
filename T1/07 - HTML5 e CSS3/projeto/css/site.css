@@ -12,6 +12,11 @@ main {
 main a {
 	color: #851944;
 }
+.texto_principal {
+	width: 720px;
+	margin: auto;
+	padding: 30px 0;
+}
 
 h1, h2 {
 	font-family: "Open Sans Condensed", "Arial", sans-serif;
@@ -26,21 +31,15 @@ h1, h2 {
 	font-size: 60px;
     text-transform: uppercase;
 }
-.sub_titulo{
-    clear: both;
-}
-
-.texto_principal {
-	width: 720px;
-	margin: auto;
-	padding: 30px 0;
-}
 
 p {
 	text-align: justify;
 	margin: 20px 0;
 }
     
+}
+.sub_titulo{
+    clear: both;
 }
 
 .navegacao {
