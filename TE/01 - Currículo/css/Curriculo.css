@@ -14,7 +14,7 @@ h3 {
     padding: 30px 0;
     font-size: 102%
 }
-div p, h1{
+.Titulo_Nome{
     width: auto;
 	margin: auto;
     text-align: center;
@@ -29,10 +29,10 @@ a {
     text-decoration:none; 
     color: inherit;
 } 
-.sub_titulo{
+.objetivo{
     clear:both;
 }
-h1 {
+.Titulo_Nome {
     font-weight: bold;
     font-size: 2em; 
     
@@ -47,7 +47,7 @@ ul {
     display: block;
     list-style-type: disc;
 }
-h3 { 
+.sub_titulo { 
     font-size: 1.17em; 
     margin: .83em 0;
     font-weight: bolder;
@@ -56,15 +56,24 @@ h3 {
 b {
     font-weight: bolder;
 }
+.subcabecalho{
+    width: auto;
+	margin: auto;
+    text-align: center;
+    font-style: italic;
+}
 
-img {
+
+.foto_perfil {
     width: 115px;
     height: 145px;
     margin-left: -115px;
     margin-bottom: 15px;
     float: right;
+    border: 8px solid #C2CCCA;
 }
 address{
+    margin-top: -20px;
     font-style: italic;
     font-size: 18px;
     
