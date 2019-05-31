@@ -1,0 +1,18 @@
+figure{
+    border: 8px solid black;
+    background: #FAFFFC;
+    width: 324px;
+	box-sizing: border-box;
+	margin: 0px 0px 16px 16px;
+    padding: 16px;  
+    float:left;
+}
+
+img {
+    width: 276px
+}
+
+.Coluna1{
+    margin-left: 0px;
+    float:left;
+}
