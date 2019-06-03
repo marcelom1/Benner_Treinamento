@@ -16,17 +16,20 @@
             @Html.ValidationMessage("produto.Invalido")
 
             <label for="nome">Nome:</label>
-            <input id="nome" name="produto.Nome" value="@ViewBag.produto.Nome"/>
+            <input id="nome" name="produto.Nome" value="@ViewBag.produto.Nome" />
             @Html.ValidationMessage("produto.Nome")
 
             <label for="preco">Preco:</label>
             <input id="preco" name="produto.Preco" value="@ViewBag.produto.Preco" />
+            @Html.ValidationMessage("produto.Preco")
 
             <label for="quantidade">Quantidade:</label>
-            <input id="quantidade" name="produto.Quantidade" value="@ViewBag.produto.Quantidade"/>
+            <input id="quantidade" name="produto.Quantidade" value="@ViewBag.produto.Quantidade" />
+            @Html.ValidationMessage("produto.Quantidade")
 
             <label for="descricao">Descricao:</label>
             <input id="descricao" name="produto.Descricao" value="@ViewBag.produto.Descricao" />
+            @Html.ValidationMessage("produto.Descricao")
 
             <label for="categoria">Categoria:</label>
             <select id="categoria" name="produto.CategoriaId">
@@ -35,6 +38,7 @@
                     <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Produto.CategoriaId)">@categoria.Nome</option>
                 }
             </select>
+            @Html.ValidationMessage("produto.CategoriaId")
 
             <input type="submit" value="Cadastrar" />
         </form>
