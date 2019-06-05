@@ -13,7 +13,9 @@ namespace CaelumEstoque.Controllers
         {
             object valorNaSession = Session["contador"];
             int contador = Convert.ToInt32(valorNaSession);
-            return View();
+            contador++;
+            Session["contador"] = contador;
+            return View(contador);
         }
     }
 }
