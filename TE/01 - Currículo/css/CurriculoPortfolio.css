@@ -1,0 +1,185 @@
+body {
+	font-family: "Crimson Text", "Times New Roman", serif;
+	line-height: 1.5; 
+    background-color: #18121E;
+    color: #F2FFFC;
+}
+h3 {
+    border-bottom: 1px solid #000000;
+}
+
+h2{
+    font-weight: bolder;
+    font-size: 1.5em; 
+    
+}
+.imgProjeto{
+    float: right;
+}
+.DescProj{
+   text-align: justify;
+}
+.texto_principal{
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: -10px;;
+    padding: 30px;
+    font-size: 100%;
+    float: right;
+    box-sizing: border-box; 
+    background-color:#233237;
+    border-left: 10px solid #ffffff;
+    
+}
+.CartProjeto{
+    
+}
+
+.Titulo_Nome{
+    width: 30%;
+	margin: auto;
+    text-align: center;
+     background-color: #18121E;
+    color: #F2FFFC;
+    margin-bottom: -30px;
+     padding: 50px;
+    float: left;
+   clear: right;
+}
+footer{
+   line-height: 3.0;
+    text-align: right;
+    clear: both;
+    
+}
+
+nav{
+    border-top: 5px solid #ffffff;
+    box-sizing: border-box; 
+    padding: 0px;
+    width: 105%
+    
+}
+
+.navegacao{
+   background-color: #18121E;
+    color: #F2FFFC;
+   
+    text-align: center;
+    width: 20%;
+	
+    clear: right;
+    position: fixed;
+}
+
+.foto_perfil {
+    width: 150px;
+    height: 140px;
+    clear:left;
+    float:inherit;
+}
+
+figure{
+    border: 8px solid black;
+    background: #D9E5E3;
+    width: 324px;
+	box-sizing: border-box;
+	margin: 0px 16px 16px 0px;
+    padding: 16px;  
+    float:left;
+    color: darkslategray;
+    border: 10px solid #ffffff;
+    text-align: center;
+    
+}
+
+.CursoGraduacao{
+    clear: none;
+    
+}
+
+.Cart{
+    text-align: center;
+     margin-left: 15%
+}
+
+.ImgFaculdade{
+    width: 100px;
+    height: 80px;
+    text-align: center;
+    
+}
+
+a { 
+    text-decoration:none; 
+    color: inherit;
+} 
+.objetivo{
+    clear:both;
+}
+.Titulo_Nome {
+    font-weight: bold;
+    font-size: 2em; 
+    text-transform: uppercase;
+    
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+} 
+ul {
+    display: block;
+    list-style-type:none;
+    margin-left: -50px;
+    
+}
+p{
+
+}
+.sub_titulo { 
+    font-size: 1.17em; 
+    margin: .83em 0;
+    font-weight: bolder;
+    clear: both;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ffffff;
+}
+
+b {
+    font-weight: bolder;
+}
+.subcabecalho{
+    width: auto;
+	margin: auto;
+    text-align: center;
+    font-style: italic;
+   
+}
+.icones_sociais li {
+    display: inline-block;
+
+}
+.icones_sociais a{
+    width: 40px;
+    height: 40px;
+    display: block;
+    color: transparent;
+
+}
+.github{
+    background-image: url(../img/github.png);
+}
+
+.linkedin{
+    background-image: url(../img/linkedin.png);
+}
+
+
+
+address{
+    margin-top: -20px;
+    font-style: italic;
+    font-size: 18px;
+    
+}
