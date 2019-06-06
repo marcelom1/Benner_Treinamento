@@ -18,10 +18,15 @@ h2{
 }
 .DescProj{
    text-align: justify;
+    margin-right: 25%;
+}
+
+.NomeProjeto{
+    text-align: justify;
 }
 .texto_principal{
     display: block;
-    text-align: center;
+    text-align: justify;
     width: 80%;
     margin: -10px;;
     padding: 30px;
@@ -144,6 +149,7 @@ p{
     clear: both;
     text-transform: uppercase;
     border-bottom: 1px solid #ffffff;
+    text-align: center;
 }
 
 b {
