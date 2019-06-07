@@ -15,6 +15,8 @@ h2{
 }
 .imgProjeto{
     float: right;
+    width: 220px;
+    height: 158px;
 }
 .DescProj{
    text-align: justify;
@@ -39,6 +41,9 @@ h2{
 }
 .CartProjeto{
     
+}
+img{
+    width: 276px;
 }
 
 .Titulo_Nome{
@@ -84,6 +89,11 @@ nav{
     clear:left;
     float:inherit;
 }
+.portfolio li {
+	display: inline-block;
+	box-sizing: border-box;
+	
+}
 
 figure{
     border: 8px solid black;
@@ -98,6 +108,18 @@ figure{
     text-align: center;
     
 }
+.FigureDireita{
+    border: 8px solid black;
+    background: #D9E5E3;
+    width: 324px;
+	box-sizing: border-box;
+	margin: 0px 16px 16px 0px;
+    padding: 16px;  
+    float:right;
+    color: darkslategray;
+    border: 10px solid #ffffff;
+    text-align: center;
+}
 
 .CursoGraduacao{
     clear: none;
@@ -106,7 +128,8 @@ figure{
 
 .Cart{
     text-align: center;
-     margin-left: 15%
+    margin-left: 15%
+
 }
 
 .ImgFaculdade{
