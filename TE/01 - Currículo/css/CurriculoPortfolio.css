@@ -42,20 +42,26 @@ h2{
 .CartProjeto{
     
 }
-img{
+
+.ImgCurso{
     width: 276px;
 }
-
-.Titulo_Nome{
+.EntreTopico{
+    clear: both;
+}
+.Titulo_Portfolio{
     width: 30%;
 	margin: auto;
     text-align: center;
-     background-color: #18121E;
+    background-color: #18121E;
     color: #F2FFFC;
     margin-bottom: -30px;
-     padding: 50px;
+    padding: 50px;
     float: left;
-   clear: right;
+    clear: right;
+    font-weight: bold;
+    font-size: 2em; 
+    text-transform: uppercase;
 }
 footer{
    line-height: 3.0;
@@ -108,23 +114,6 @@ figure{
     text-align: center;
     
 }
-.FigureDireita{
-    border: 8px solid black;
-    background: #D9E5E3;
-    width: 324px;
-	box-sizing: border-box;
-	margin: 0px 16px 16px 0px;
-    padding: 16px;  
-    float:right;
-    color: darkslategray;
-    border: 10px solid #ffffff;
-    text-align: center;
-}
-
-.CursoGraduacao{
-    clear: none;
-    
-}
 
 .Cart{
     text-align: center;
@@ -143,28 +132,14 @@ a {
     text-decoration:none; 
     color: inherit;
 } 
-.objetivo{
-    clear:both;
-}
-.Titulo_Nome {
-    font-weight: bold;
-    font-size: 2em; 
-    text-transform: uppercase;
-    
-}
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-} 
+
 ul {
     display: block;
     list-style-type:none;
-    margin-left: -50px;
+    margin-left: -60px;
     
 }
-p{
 
-}
 .sub_titulo { 
     font-size: 1.17em; 
     margin: .83em 0;
@@ -178,13 +153,7 @@ p{
 b {
     font-weight: bolder;
 }
-.subcabecalho{
-    width: auto;
-	margin: auto;
-    text-align: center;
-    font-style: italic;
-   
-}
+
 .icones_sociais li {
     display: inline-block;
 
@@ -203,8 +172,6 @@ b {
 .linkedin{
     background-image: url(../img/linkedin.png);
 }
-
-
 
 address{
     margin-top: -20px;
