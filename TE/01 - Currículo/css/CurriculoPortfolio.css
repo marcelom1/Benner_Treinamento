@@ -20,7 +20,7 @@ h2{
 }
 .DescProj{
    text-align: justify;
-    margin-right: 25%;
+    margin-right: 250px;
 }
 
 .NomeProjeto{
@@ -32,7 +32,7 @@ h2{
     width: 80%;
     margin: -10px;;
     padding: 30px;
-    font-size: 100%;
+    font-size: 105%;
     float: right;
     box-sizing: border-box; 
     background-color:#233237;
@@ -50,14 +50,13 @@ h2{
     clear: both;
 }
 .Titulo_Portfolio{
-    width: 30%;
-	margin: auto;
+    
+	 margin-bottom: -30px;
     text-align: center;
     background-color: #18121E;
     color: #F2FFFC;
-    margin-bottom: -30px;
+   
     padding: 50px;
-    float: left;
     clear: right;
     font-weight: bold;
     font-size: 2em; 
@@ -81,10 +80,8 @@ nav{
 .navegacao{
    background-color: #18121E;
     color: #F2FFFC;
-   
     text-align: center;
     width: 20%;
-	
     clear: right;
     position: fixed;
 }
@@ -92,8 +89,10 @@ nav{
 .foto_perfil {
     width: 150px;
     height: 140px;
-    clear:left;
-    float:inherit;
+    clear:right;
+	display: inline-block;
+   
+	
 }
 .portfolio li {
 	display: inline-block;
@@ -112,13 +111,19 @@ figure{
     color: darkslategray;
     border: 10px solid #ffffff;
     text-align: center;
+	height: 200px;
+   
     
+}
+
+.figureCurso{
+	height: 400px;
 }
 
 .Cart{
     text-align: center;
-    margin-left: 15%
-
+	
+	
 }
 
 .ImgFaculdade{
@@ -141,7 +146,7 @@ ul {
 }
 
 .sub_titulo { 
-    font-size: 1.17em; 
+    font-size: 2em; 
     margin: .83em 0;
     font-weight: bolder;
     clear: both;
