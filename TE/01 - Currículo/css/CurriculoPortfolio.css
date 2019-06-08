@@ -11,6 +11,7 @@ h3 {
 h2{
     font-weight: bolder;
     font-size: 1.5em; 
+    margin-bottom: -10px;
     
 }
 .imgProjeto{
@@ -32,7 +33,7 @@ h2{
     width: 80%;
     margin: -10px;;
     padding: 30px;
-    font-size: 105%;
+    font-size: 100%;
     float: right;
     box-sizing: border-box; 
     background-color:#233237;
@@ -51,12 +52,12 @@ h2{
 }
 .Titulo_Portfolio{
     
-	 margin-bottom: -30px;
+	 margin-bottom: -10px;
     text-align: center;
     background-color: #18121E;
     color: #F2FFFC;
    
-    padding: 50px;
+    
     clear: right;
     font-weight: bold;
     font-size: 2em; 
@@ -73,7 +74,7 @@ nav{
     border-top: 5px solid #ffffff;
     box-sizing: border-box; 
     padding: 0px;
-    width: 105%
+    width: 104%
     
 }
 
@@ -83,10 +84,12 @@ nav{
     text-align: center;
     width: 20%;
     clear: right;
-    position: fixed;
+    position:fixed;
+    height: 10%;
 }
 
 .foto_perfil {
+    margin-bottom: -10px;
     width: 150px;
     height: 140px;
     clear:right;
