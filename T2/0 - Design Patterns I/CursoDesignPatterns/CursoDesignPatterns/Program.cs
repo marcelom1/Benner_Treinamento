@@ -10,14 +10,31 @@ namespace CursoDesignPatterns
     {
         static void Main(string[] args)
         {
-            Imposto iss = new ISS();
+            /*Imposto iss = new ISS();
             Imposto icms = new ICMS();
-
-            Orcamento orcamento = new Orcamento(500);
+            Imposto iccc = new ICCC();
+            
+             Orcamento orcamento = new Orcamento(3001);
 
             CalculadorDeImpostos calculadora = new CalculadorDeImpostos();
+             */
+            Investimento conservador = new Conservador();
+            Investimento moderado = new Moderado();
+            Investimento arrojado = new Arrojado();
 
-            calculadora.RealizaCalculo(orcamento,icms);
+            Conta marcelo = new Conta();
+
+            marcelo.Deposita(50);
+
+            RealizadorDeInvestimentos calInvest = new RealizadorDeInvestimentos();
+
+            calInvest.Realiza(marcelo, conservador);
+            calInvest.Realiza(marcelo, moderado);
+            calInvest.Realiza(marcelo, arrojado);
+
+
+
+
 
             Console.ReadLine();
         }

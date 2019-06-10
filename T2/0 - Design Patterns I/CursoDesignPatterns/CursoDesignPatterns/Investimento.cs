@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace CursoDesignPatterns
 {
-    class ICMS : Imposto
+    public interface Investimento
     {
-        public double Calcula(Orcamento orcamento)
-        {
-            return orcamento.valor * 0.05+50;
-        }
+        double Calcula(Conta conta);
     }
+    
 }
