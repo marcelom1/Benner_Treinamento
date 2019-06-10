@@ -10,9 +10,20 @@ namespace CursoDesignPatterns
     {
         public CorrenteArquivo OutroResultado { get; set; }
 
+        public CorrentePORCENTO(CorrenteArquivo outroResultado)
+        {
+            OutroResultado = outroResultado;
+        }
+        public CorrentePORCENTO()
+        {
+            OutroResultado = null;
+        }
+
+
         public void Resultado(Requisicao req, Conta conta)
         {
-            if (req.Formato == Formato.CSV)
+           
+            if (req.Formato == Formato.PORCENTO)
             {
                 Console.WriteLine(conta.Nome + "%" + conta.Saldo);
             }

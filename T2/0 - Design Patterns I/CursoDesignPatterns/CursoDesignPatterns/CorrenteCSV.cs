@@ -8,17 +8,33 @@ namespace CursoDesignPatterns
 {
     class CorrenteCSV : CorrenteArquivo
     {
+
         public CorrenteArquivo OutroResultado { get; set; }
+
+        public CorrenteCSV(CorrenteArquivo outroResultado)
+        {
+            OutroResultado = outroResultado;
+        }
+
+        public CorrenteCSV()
+        {
+            OutroResultado = null;
+        }
 
         public void Resultado(Requisicao req, Conta conta)
         {
+            
             if (req.Formato == Formato.CSV)
             {
-                Console.WriteLine(conta.Nome+"|"+conta.Saldo);
+                Console.WriteLine(conta.Nome+";"+conta.Saldo);
+            }
+            else if (OutroResultado!=null)
+            {
+                OutroResultado.Resultado(req, conta);
             }
             else
             {
-                OutroResultado.Resultado(req, conta);
+                Console.WriteLine("Tipo de Arquivo Não encontrato");
             }
         }
     }
