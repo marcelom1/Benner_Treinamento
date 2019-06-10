@@ -10,16 +10,16 @@ namespace CursoDesignPatterns
     {
         public double Calcula(Orcamento orcamento)
         {
-            if (orcamento.valor < 1000)
+            if (orcamento.Valor < 1000)
             {
-                return orcamento.valor * 0.05;
+                return orcamento.Valor * 0.05;
             }
-            else if(orcamento.valor<=3000)
+            else if(orcamento.Valor<=3000)
             {
-                return orcamento.valor * 0.07;
+                return orcamento.Valor * 0.07;
             }else
             {
-                return orcamento.valor * 0.08 + 30;
+                return orcamento.Valor * 0.08 + 30;
             }
         }
     }

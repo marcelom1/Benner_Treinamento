@@ -9,6 +9,19 @@ namespace CursoDesignPatterns
     public class Conta
     {
         public double Saldo { get; private set; }
+        public string Nome { get; private set; }
+
+        public Conta(double saldo, string nome)
+        {
+            Saldo = saldo;
+            Nome = nome;
+        }
+
+        public Conta(double saldo)
+        {
+            Saldo = saldo;
+
+        }
 
         public void Deposita(double valor)
         {

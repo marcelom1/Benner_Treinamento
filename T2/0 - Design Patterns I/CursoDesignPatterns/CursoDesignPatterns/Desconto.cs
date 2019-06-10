@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace CursoDesignPatterns
 {
-    class ISS : Imposto
+    public interface Desconto
     {
-        public double Calcula(Orcamento orcamento)
-        {
-            return orcamento.Valor * 0.06;
-        }
+        Desconto Proximo { get; set; }
+        double Desconta(Orcamento orcamento);
     }
 }

@@ -18,7 +18,8 @@ namespace CursoDesignPatterns
 
             CalculadorDeImpostos calculadora = new CalculadorDeImpostos();
              */
-            Investimento conservador = new Conservador();
+
+            /*Investimento conservador = new Conservador();
             Investimento moderado = new Moderado();
             Investimento arrojado = new Arrojado();
 
@@ -31,10 +32,16 @@ namespace CursoDesignPatterns
             calInvest.Realiza(marcelo, conservador);
             calInvest.Realiza(marcelo, moderado);
             calInvest.Realiza(marcelo, arrojado);
+            */
 
+            CalculadorDeDescontos calculador = new CalculadorDeDescontos();
+            Orcamento orcamento = new Orcamento(500);
+            orcamento.AdicionaItem(new Item("CANETA", 250));
+            orcamento.AdicionaItem(new Item("LAPIS", 250));
+            orcamento.AdicionaItem(new Item("copo", 250));
 
-
-
+            double desconto = calculador.Calcula(orcamento);
+            Console.WriteLine(desconto);
 
             Console.ReadLine();
         }
