@@ -8,6 +8,7 @@ namespace CursoDesignPatterns
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             /*Imposto iss = new ISS();
@@ -62,7 +63,7 @@ namespace CursoDesignPatterns
             d1.Resultado(new Requisicao(Formato.XML), marcelo);
             d1.Resultado(new Requisicao(Formato.CSV), marcelo);
             */
-
+            /*
             Imposto ikcv = new IKCV();
             Imposto icpp = new ICPP();
             Imposto ihit = new IHIT();
@@ -71,13 +72,40 @@ namespace CursoDesignPatterns
             Orcamento orcamento = new Orcamento(100);
             orcamento.AdicionaItem(new Item("CANETA", 250));
             orcamento.AdicionaItem(new Item("LAPIS", 250));
-            orcamento.AdicionaItem(new Item("copo", 250));
+            orcamento.AdicionaItem(new Item("copo1", 250));
+            orcamento.AdicionaItem(new Item("copo6", 250));
+            orcamento.AdicionaItem(new Item("copo3", 250));
+            orcamento.AdicionaItem(new Item("copo2", 250));
+            orcamento.AdicionaItem(new Item("copo4", 250));
+            orcamento.AdicionaItem(new Item("copo5", 250));
+            orcamento.AdicionaItem(new Item("copo6", 250));
+            orcamento.AdicionaItem(new Item("copo7", 250));
+            
 
             CalculadorDeImpostos calculadora = new CalculadorDeImpostos();
 
             calculadora.RealizaCalculo(orcamento, ikcv);
             calculadora.RealizaCalculo(orcamento, icpp);
             calculadora.RealizaCalculo(orcamento, ihit);
+            */
+            IList<Conta> Contas;
+            Contas = new List<Conta>();
+            Contas.Add(new Conta(100, "Marcelo"));
+            Contas.Add(new Conta(200, "Gabriele"));
+            Contas.Add(new Conta(300, "Marco"));
+            Contas.Add(new Conta(400, "Marilene"));
+            Contas.Add(new Conta(500, "Ivani"));
+
+            Relatorio complexo = new RelatorioComplexo();
+            Relatorio simples = new RelatorioSimples();
+
+            Console.WriteLine("Complexo\n");
+            complexo.Impressao(Contas);
+
+            Console.WriteLine("\n\nSimples\n" + simples);
+            simples.Impressao(Contas);
+
+
             Console.ReadLine();
         }
 

@@ -8,6 +8,7 @@ namespace CursoDesignPatterns
 {
     class IHIT : TemplateDeImpostoCondicional
     {
+        int cont = 0;
         public override bool DeveUsarMaximaTaxacao(Orcamento orcamento)
         {
             foreach (Item item in orcamento.Itens)
@@ -16,7 +17,11 @@ namespace CursoDesignPatterns
                 {
                     if (item.Nome.Equals(item2.Nome))
                     {
-                        return true;
+                        cont++;
+                        if (cont >= orcamento.Itens.Count+1)
+                        {
+                            return true;
+                        }
                     }
                 }
             }

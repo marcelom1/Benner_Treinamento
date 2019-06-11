@@ -71,6 +71,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RealizadorDeInvestimentos.cs" />
+    <Compile Include="Relatorio.cs" />
+    <Compile Include="RelatorioComplexo.cs" />
+    <Compile Include="RelatorioSimples.cs" />
     <Compile Include="Requisição.cs" />
     <Compile Include="SemDesconto.cs" />
     <Compile Include="TemplateDeImpostoCondicional.cs" />
