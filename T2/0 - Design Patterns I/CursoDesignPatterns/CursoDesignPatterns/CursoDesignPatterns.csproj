@@ -57,11 +57,16 @@
     <Compile Include="DescontoPorCincoItens.cs" />
     <Compile Include="DescontoPorMaisDeQuinhentosReais.cs" />
     <Compile Include="DescontoPorVendaCasada.cs" />
+    <Compile Include="Filtro.cs" />
+    <Compile Include="FiltroContaAberturaNoMes.cs" />
+    <Compile Include="FiltroContaSaldoMaior500Reais.cs" />
+    <Compile Include="FiltroContaSaldoMenor100Reais.cs" />
     <Compile Include="ICCC.cs" />
     <Compile Include="ICMS.cs" />
     <Compile Include="ICPP.cs" />
     <Compile Include="IHIT.cs" />
     <Compile Include="IKCV.cs" />
+    <Compile Include="IMA.cs" />
     <Compile Include="Imposto.cs" />
     <Compile Include="Investimento.cs" />
     <Compile Include="ISS.cs" />

@@ -88,7 +88,8 @@ namespace CursoDesignPatterns
             calculadora.RealizaCalculo(orcamento, icpp);
             calculadora.RealizaCalculo(orcamento, ihit);
             */
-            IList<Conta> Contas;
+
+            /*IList<Conta> Contas;
             Contas = new List<Conta>();
             Contas.Add(new Conta(100, "Marcelo"));
             Contas.Add(new Conta(200, "Gabriele"));
@@ -104,7 +105,12 @@ namespace CursoDesignPatterns
 
             Console.WriteLine("\n\nSimples\n" + simples);
             simples.Impressao(Contas);
+            */
 
+            Imposto impostoComplexo = new IMA(new ISS(new ICMS()));
+            Orcamento orcamento = new Orcamento(500.0);
+            double valor = impostoComplexo.Calcula(orcamento);
+            Console.WriteLine(valor);
 
             Console.ReadLine();
         }
