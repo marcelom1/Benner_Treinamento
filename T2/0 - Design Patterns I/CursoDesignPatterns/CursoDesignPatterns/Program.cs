@@ -107,10 +107,41 @@ namespace CursoDesignPatterns
             simples.Impressao(Contas);
             */
 
+            /*
             Imposto impostoComplexo = new IMA(new ISS(new ICMS()));
             Orcamento orcamento = new Orcamento(500.0);
             double valor = impostoComplexo.Calcula(orcamento);
             Console.WriteLine(valor);
+            */
+
+            /*
+            IList<Conta> Contas;
+            Contas = new List<Conta>();
+            Contas.Add(new Conta(100, "Marcelo"));
+            Contas.Add(new Conta(200, "Gabriele"));
+            Contas.Add(new Conta(300, "Marco"));
+            Contas.Add(new Conta(400, "Marilene"));
+            Contas.Add(new Conta(500, "Ivani"));
+            Filtro Filtro1 = new FiltroContaAberturaNoMes();
+            IList<Conta> ContasFiltradas;
+            */
+
+            Orcamento reforma = new Orcamento(500.0);
+
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor);
+
+            reforma.Aprova(); 
+
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor); 
+
+            reforma.Finaliza();
+
+            // reforma.AplicaDescontoExtra(); lancaria excecao, pois não pode dar desconto nesse estado
+            // reforma.Aprova(); lança exceção, pois não pode ir para aprovado
+
+
 
             Console.ReadLine();
         }

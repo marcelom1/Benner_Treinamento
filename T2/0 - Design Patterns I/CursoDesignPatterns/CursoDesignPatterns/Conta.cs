@@ -11,10 +11,13 @@ namespace CursoDesignPatterns
         public double Saldo { get; private set; }
         public string Nome { get; private set; }
 
+        public DateTime DataAbertura { get; private set; }
+
         public Conta(double saldo, string nome)
         {
             Saldo = saldo;
             Nome = nome;
+            DataAbertura = DateTime.Now;
         }
 
         public Conta(double saldo)
