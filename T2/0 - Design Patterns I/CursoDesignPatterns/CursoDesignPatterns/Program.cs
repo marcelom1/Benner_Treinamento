@@ -126,6 +126,7 @@ namespace CursoDesignPatterns
             IList<Conta> ContasFiltradas;
             */
 
+            /*
             Orcamento reforma = new Orcamento(500.0);
 
             reforma.AplicaDescontoExtra();
@@ -140,9 +141,36 @@ namespace CursoDesignPatterns
 
             // reforma.AplicaDescontoExtra(); lancaria excecao, pois não pode dar desconto nesse estado
             // reforma.Aprova(); lança exceção, pois não pode ir para aprovado
+            */
 
+            /*
+            Conta marcelo = new Conta(500,"Marcelo");
 
+            marcelo.Saca(100);
+            Console.WriteLine(marcelo.Saldo + " " + marcelo.Estado);
 
+            marcelo.Saca(500);
+            Console.WriteLine(marcelo.Saldo + " " + marcelo.Estado);
+
+            marcelo.Saca(500);
+            Console.WriteLine(marcelo.Saldo + " " + marcelo.Estado);
+
+            marcelo.Deposita(300);
+            Console.WriteLine(marcelo.Saldo + " " + marcelo.Estado);
+            */
+            NotaFiscalBuilder criador = new NotaFiscalBuilder();
+            criador.ParaEmpresa("Caelum")
+                .ComCnpj("123.456.789/0001-10")
+                .ComItem(new ItemDaNota("item 1", 100.0))
+                .ComItem(new ItemDaNota("item 2", 200.0))
+                .ComItem(new ItemDaNota("item 3", 300.0))
+                .ComObservacoes("entregar nf pessoalmente");
+                
+                //.NaData();
+
+            NotaFiscal nf = criador.Constroi();
+
+            Console.WriteLine(nf);
             Console.ReadLine();
         }
 

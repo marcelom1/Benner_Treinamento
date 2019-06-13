@@ -8,10 +8,13 @@ namespace CursoDesignPatterns
 {
     class Aprovado : EstadoDeUmOrcamento
     {
+        bool DescontoJaAplicado = false;
         public void AplicaDescontoExtra(Orcamento orcamento)
         {
-
-            orcamento.Valor -= orcamento.Valor * 0.02;
+            if (DescontoJaAplicado = !true)
+            {
+                orcamento.Valor -= orcamento.Valor * 0.02;
+            }
         }
 
         public void Aprova(Orcamento orcamento)

@@ -11,7 +11,11 @@ namespace CursoDesignPatterns
         bool DescontoJaAplicado = false;
         public void AplicaDescontoExtra(Orcamento orcamento)
         {
-            orcamento.Valor -= orcamento.Valor * 0.05;
+            if (DescontoJaAplicado = !true)
+            {
+                orcamento.Valor -= orcamento.Valor * 0.05;
+                DescontoJaAplicado = true;
+            }
         }
         public void Aprova(Orcamento orcamento)
         {
