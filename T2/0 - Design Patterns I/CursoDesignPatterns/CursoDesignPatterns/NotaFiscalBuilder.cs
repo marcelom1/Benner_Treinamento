@@ -16,15 +16,34 @@ namespace CursoDesignPatterns
         public String Observacoes { get; private set; }
 
         private IList<ItemDaNota> TodosItens = new List<ItemDaNota>();
+        private IList<AcaoAposGerarNota> todasAcoesASeremExecutadas;
+
+        public NotaFiscalBuilder(IList<AcaoAposGerarNota> lista)
+        {
+            this.todasAcoesASeremExecutadas = lista;
+        }
+
+        public void AdicionaAcao(AcaoAposGerarNota novaAcao)
+        {
+            this.todasAcoesASeremExecutadas.Add(novaAcao);
+        }
 
         public NotaFiscalBuilder()
         {
+            todasAcoesASeremExecutadas = new List<AcaoAposGerarNota>();
             Data = DateTime.Now;
         }
         public NotaFiscal Constroi()
         {
             
-            return new NotaFiscal(RazaoSocial, Cnpj, Data, ValorTotal, Impostos, TodosItens, Observacoes);
+            NotaFiscal nf = new NotaFiscal(RazaoSocial, Cnpj, Data, ValorTotal, Impostos, TodosItens, Observacoes);
+
+            foreach (AcaoAposGerarNota acao in todasAcoesASeremExecutadas)
+            {
+                acao.Executa(nf);
+            }
+
+            return nf;
         }
 
         public NotaFiscalBuilder ComObservacoes(string observacoes)

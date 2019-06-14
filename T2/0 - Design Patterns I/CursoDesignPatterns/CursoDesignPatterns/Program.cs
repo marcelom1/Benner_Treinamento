@@ -159,6 +159,12 @@ namespace CursoDesignPatterns
             Console.WriteLine(marcelo.Saldo + " " + marcelo.Estado);
             */
             NotaFiscalBuilder criador = new NotaFiscalBuilder();
+            criador.AdicionaAcao(new EnviadorDeEmail());
+            criador.AdicionaAcao(new NotaFiscalDao());
+            criador.AdicionaAcao(new EnviadorDeSms());
+            criador.AdicionaAcao(new Impressora());
+            criador.AdicionaAcao(new Multiplicador(2));
+
             criador.ParaEmpresa("Caelum")
                 .ComCnpj("123.456.789/0001-10")
                 .ComItem(new ItemDaNota("item 1", 100.0))
