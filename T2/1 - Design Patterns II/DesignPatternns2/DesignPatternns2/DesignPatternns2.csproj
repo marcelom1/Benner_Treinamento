@@ -80,6 +80,8 @@
     <Compile Include="Cap7\PagaPedido.cs" />
     <Compile Include="Cap7\Pedido.cs" />
     <Compile Include="Cap7\Status.cs" />
+    <Compile Include="Cap8\Cliente.cs" />
+    <Compile Include="Cap8\GeradorDeXml.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

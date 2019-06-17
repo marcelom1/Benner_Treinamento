@@ -8,12 +8,12 @@ namespace DesignPatternns2.Cap7
 {
     public class Pedido
     {
-        public String Cliente { get; private set; }
+        public string Cliente { get; private set; }
         public double Valor { get; private set; }
         public Status Status { get; private set; }
         public DateTime DataFinalizacao { get; private set; }
 
-        public Pedido(String cliente, double valor)
+        public Pedido(string cliente, double valor)
         {
             this.Cliente = cliente;
             this.Valor = valor;

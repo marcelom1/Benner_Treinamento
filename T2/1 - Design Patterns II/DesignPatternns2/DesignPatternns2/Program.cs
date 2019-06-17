@@ -5,6 +5,7 @@ using DesignPatternns2.Cap4;
 using DesignPatternns2.Cap5;
 using DesignPatternns2.Cap6;
 using DesignPatternns2.Cap7;
+using DesignPatternns2.Cap8;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -102,7 +103,7 @@ namespace DesignPatternns2
 
             mensagem.Envia();
             */
-
+            /*
             Pedido pedido1 = new Pedido("Mauricio", 150.0);
             Pedido pedido2 = new Pedido("Marcelo", 250.0);
 
@@ -113,6 +114,16 @@ namespace DesignPatternns2
             fila.Adiciona(new FinalizaPedido(pedido1));
 
             fila.Processa();
+            */
+            Cliente cliente = new Cliente();
+            cliente.Nome = "victor";
+            cliente.Endereco = "Rua Vergueiro";
+            cliente.DataDeNascimento = DateTime.Now;
+
+            GeradorDeXml gerador = new GeradorDeXml();
+            string xml = gerador.GeraXml(cliente);
+
+            Console.WriteLine(xml);
             Console.ReadLine();
         }
     }
