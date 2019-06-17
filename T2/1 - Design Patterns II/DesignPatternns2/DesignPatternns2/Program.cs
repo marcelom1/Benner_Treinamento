@@ -6,6 +6,7 @@ using DesignPatternns2.Cap5;
 using DesignPatternns2.Cap6;
 using DesignPatternns2.Cap7;
 using DesignPatternns2.Cap8;
+using DesignPatternns2.Cap9;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -115,6 +116,7 @@ namespace DesignPatternns2
 
             fila.Processa();
             */
+            /*
             Cliente cliente = new Cliente();
             cliente.Nome = "victor";
             cliente.Endereco = "Rua Vergueiro";
@@ -123,7 +125,9 @@ namespace DesignPatternns2
             GeradorDeXml gerador = new GeradorDeXml();
             string xml = gerador.GeraXml(cliente);
 
-            Console.WriteLine(xml);
+            Console.WriteLine(xml);*/
+            EmpresaFacade fachada = new EmpresaFacadeSingleton().Instancia;
+            Servico fachado2 = new ServicoSingleton().Instancia;
             Console.ReadLine();
         }
     }
