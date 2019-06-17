@@ -82,6 +82,10 @@
     <Compile Include="Cap7\Status.cs" />
     <Compile Include="Cap8\Cliente.cs" />
     <Compile Include="Cap8\GeradorDeXml.cs" />
+    <Compile Include="Cap9\EmpresaFacade.cs" />
+    <Compile Include="Cap9\EmpresaFacadeSingleton.cs" />
+    <Compile Include="Cap9\Servico.cs" />
+    <Compile Include="Cap9\ServicoSingleton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
