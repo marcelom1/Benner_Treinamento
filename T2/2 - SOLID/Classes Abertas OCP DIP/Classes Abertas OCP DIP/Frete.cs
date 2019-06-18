@@ -10,6 +10,7 @@ namespace Classes_Abertas_OCP_DIP
     {
         public double Para(string cidade)
         {
+            
             if ("SAO PAULO".Equals(cidade.ToUpper()))
             {
                 return 15;

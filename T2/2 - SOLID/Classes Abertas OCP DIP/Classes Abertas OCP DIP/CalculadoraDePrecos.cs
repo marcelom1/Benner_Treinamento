@@ -19,8 +19,9 @@ namespace Classes_Abertas_OCP_DIP
 
         public double Calcula(Compra produto)
         {
-            double desconto = this.tabela.DescontoPara(produto.Valor);
-            double frete = this.entrega.Para(produto.Cidade);
+            
+            double desconto = tabela.DescontoPara(produto.Valor);
+            double frete = entrega.Para(produto.Cidade);
 
             return produto.Valor * (1 - desconto) + frete;
         }

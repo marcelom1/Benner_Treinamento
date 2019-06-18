@@ -13,10 +13,12 @@ namespace Classes_Abertas_OCP_DIP
             Compra compra = new Compra(500,"sao paulo");
 
             CalculadoraDePrecos calc = new CalculadoraDePrecos(new TabelaDePrecoPadrao(),new Frete());
-
+            
             double resultado = calc.Calcula(compra);
 
             Console.WriteLine("O preco da compra é: " + resultado);
+
+            Console.ReadLine();
         }
     }
 }
