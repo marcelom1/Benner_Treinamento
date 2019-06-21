@@ -14,8 +14,9 @@ namespace ByteBank.Portal.Infraestrutura
         protected string View([CallerMemberName]string nomeArquivo = null)
         {
             var type = GetType();
+            var diretorioNome = type.Name.Replace("Controller", "");
 
-            var nomeCompletoResource = $"ByteBank.Portal.View.Cambio.{nomeArquivo}.html";
+            var nomeCompletoResource = $"ByteBank.Portal.View.{diretorioNome}.{nomeArquivo}.html";
             var assembly = Assembly.GetExecutingAssembly();
             var streamRecurso = assembly.GetManifestResourceStream(nomeCompletoResource);
             var streamLeitura = new StreamReader(streamRecurso);
