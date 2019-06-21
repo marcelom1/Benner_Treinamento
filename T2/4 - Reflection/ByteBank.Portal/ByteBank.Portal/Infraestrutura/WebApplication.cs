@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ByteBank.Portal.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -36,36 +37,19 @@ namespace ByteBank.Portal.Infraestrutura
             var resposta = contexto.Response;
 
             var path = requisicao.Url.AbsolutePath;
-          
-            var assembly = Assembly.GetExecutingAssembly();
-            var nomeResource = Utilidades.ConverterPathParaNomeAssembly(path);
 
-            var resourceStream = assembly.GetManifestResourceStream(nomeResource);
 
-            if (resourceStream == null)
+            if (Utilidades.EhArquivo(path))
             {
-                resposta.StatusCode = 404;
-                resposta.OutputStream.Close();
+                var manipulador = new ManipuladorRequisicaoArquivo();
+                manipulador.Manipular(resposta, path);
             }
             else
             {
-                var bytesResource = new byte[resourceStream.Length];
-
-                resourceStream.Read(bytesResource, 0, (int)resourceStream.Length);
-
-
-
-
-                resposta.ContentType = Utilidades.ObterTipoDeConteudo(path);
-                resposta.StatusCode = 200;
-                resposta.ContentLength64 = resourceStream.Length;
-
-                resposta.OutputStream.Write(bytesResource, 0, bytesResource.Length);
-
-                resposta.OutputStream.Close();
+                var manipulador = new ManipuladorRequisicaoController();
+                manipulador.Manipular(resposta, path);
             }
-           
-          
+
             httpListener.Stop();
         }
 
