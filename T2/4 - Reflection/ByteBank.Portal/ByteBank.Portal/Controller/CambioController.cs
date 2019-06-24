@@ -52,6 +52,7 @@ namespace ByteBank.Portal.Controller
                 .Replace("VALOR_MOEDA_DESTINO", valorFinal.ToString())
                 .Replace("MOEDA_ORIGEM", moedaOrigem)
                 .Replace("MOEDA_DESTINO", moedaDestino);
+            return textoResultado;
         }
     }
 }
