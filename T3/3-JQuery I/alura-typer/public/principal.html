@@ -3,8 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Alura Typer</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
 </head>
 <body>
-    <!-- Seja bem vindo ao curso de jQuery :) -->
+    <div class="container">
+        <h1 class="center">Alura Type</h1>
+        <p class="frase center">Teste Três e Palavra</p>
+
+        <ul class="informacoes center">
+            <li>
+                <i class="small material-icons icones">description</i>
+                <span class="tamanhofrase">3</span> Palavras
+            </li>
+            <li>
+                <i class="small material-icons icones">query_builder</i>
+                <span id="tempo_digitacao">5</span> Segundos
+            </li>
+
+        </ul>
+
+        <textarea class = "campo_digitacao" rows="8" cols="40"></textarea>
+        
+        <div class="botoes">
+            <a id="botao_reiniciar" class="btn-floating btn-large waves-effect waves-light red">
+                <i class="material-icons">restore</i>
+            </a>
+        </div>
+        
+        <ul class="center">
+            <li><span id="contador_caracteres">0</span> Caracteres</li>
+            <li><span id="contador_palavras">0</span> Palavras</li>
+
+        </ul>
+        
+        <section class ="placar">
+            <h3 class="center">Placar</h3>
+            <table class="centered bordered">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nº de Palavras</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th></th>
+                    </tr>
+                
+                </tbody>
+            
+            
+            </table>
+        </section>
+        
+    
+    </div>
+    
+    
+    
+    
+    <script src="js/jquery.js"> </script>
+    <script src="js/main.js"> </script>
+    <script src="js/placar.js"> </script>
+
 </body>
 </html>
