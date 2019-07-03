@@ -6,7 +6,7 @@
 .select_user{
     display: inline-block;
 }
-.usuarios{
+#usuarios{
     display: block;
 }
 .frase{
@@ -45,6 +45,12 @@
 
 body{
     overflow: scroll;
+}
+
+.selectize-input{
+    width: 150px;
+    vertical-align: middle;
+        
 }
 
 #erro{
