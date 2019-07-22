@@ -9,8 +9,11 @@
       <li class="lista-fotos-item" v-for="foto of fotosComFiltro" :key="foto._id">
 
        <meu-painel :titulo="foto.titulo">
-         <imagem-responsiva v-meu-transform:scale.animate="1.2" :url="foto.url" :titulo="foto.titulo"></imagem-responsiva>
-         <meu-botao tipo="button" rotulo="REMOVER" @botaoAtivado="remove(foto)" :confirmacao="false" estilo="perigo"/>
+          <imagem-responsiva v-meu-transform:scale.animate="1.2" :url="foto.url" :titulo="foto.titulo"></imagem-responsiva>
+          <router-link :to="{ name: 'altera', params: {  id: foto._id  } }">
+            <meu-botao tipo="button" rotulo="ALTERAR" />
+          </router-link>
+          <meu-botao tipo="button" rotulo="REMOVER" @botaoAtivado="remove(foto)" :confirmacao="false" estilo="perigo"/>
       </meu-painel>
 
       </li>
@@ -23,6 +26,7 @@
 import painel from '../shared/painel/painel.vue';
 import ImagemResponsiva from '../shared/imagem-responsiva/imagem-responsiva.vue';
 import Botao from '../shared/botao/botao.vue';
+import FotoService from '../../domain/foto/FotoService.js';
 
 
 export default {
@@ -55,16 +59,14 @@ export default {
   },
   methods:{
     remove(foto){
-      this.resource.delete({id: foto._id})
+      this.service.apaga(foto._id)
       .then(()=>{
         let indice = this.fotos.indexOf(foto);
         this.fotos.splice(indice,1);
         this.mensagem='Foto removida com sucesso'
-        
         },err=>{
-        console.log(err);
-        this.mensagem='Não foi possivel remover a foto';
-      });
+          this.mensagem = err.mensagem;
+        });
 
 
       /*this.$http.delete(`v1/fotos/${foto._id}`)
@@ -83,11 +85,21 @@ export default {
 
   created(){
 
+    this.service = new FotoService(this.$resource)
+
+    this.service
+        .lista()
+        .then(fotos=>this.fotos=fotos,err =>{
+          this.mensagem = err.mensagem;
+        });
+
+/*
+
     this.resource = this.$resource('v1/fotos{/id}');
     this.resource
       .query()
       .then(res=>res.json())
-      .then(fotos=>this.fotos=fotos,err =>console.log(err));
+      .then(fotos=>this.fotos=fotos,err =>console.log(err));*/
 /*
     let promise = this.$http.get('v1/fotos');
     promise

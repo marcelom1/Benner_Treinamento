@@ -38,7 +38,9 @@ export default {
     }
 }
 </script>
-<style>
+<style >
+    
+     
      .botao {
         display: inline-block;
         padding: 10px;

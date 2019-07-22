@@ -1,8 +1,11 @@
-import Cadastro from './componentes/cadastro/Cadastro.vue';
+//import Cadastro from './componentes/cadastro/Cadastro.vue';
+const Cadastro =()=> System.import('./componentes/cadastro/Cadastro.vue');
 import Home from './componentes/home/home.vue';
 
 
 export const routes =[
-    {path: '',component: Home, titulo:'Home'},
-    {path: '/cadastro',component: Cadastro, titulo: 'Cadastro'}
+    {path: '', name: 'home', component: Home, titulo:'Home', menu: true},
+    {path: '/cadastro', name: 'cadastro',component: Cadastro, titulo: 'Cadastro',menu: true},
+    {path: '/cadastro/:id', name: 'altera',component: Cadastro, titulo: 'Cadastro',menu: false},
+    {path: '*',component: Home,menu: false}
 ];
